@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,200&display=swap');
+</style>
+<body>
+  <% if logged_in? %>
+
+    logged in as <%= current_user.email %>
+
+    <form action="/session" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button>logout</button>
+    </form>
+
+  <% else %>
+    <a href="/login">login</a>
+  <% end %>
+
+  <a href="/">Home</a>
+
+  <%= yield %>
+
+</body>
+</html>

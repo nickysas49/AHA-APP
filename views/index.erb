@@ -1,0 +1,9 @@
+<h1>STOCK</h1>
+<a href="/add_item">Add your STOCK</a>
+
+<section class="image-list">
+    <% images.each do |image| %>
+        <h2><a href="/images/<%= image['id']%>"><%= image['name']%></h2>
+        <img src="<%= image['image_front']%>" alt="">
+    <% end %>
+</section>
