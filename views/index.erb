@@ -1,5 +1,19 @@
-<h1>STOCK</h1>
-<a href="/add_item">Add your STOCK</a>
+<header>
+    <h1>Artist Help Artist</h1>
+    <h2>POST AND FIND STOCK PICTURES</h2>
+    <% if logged_in? %>
+    <a href="/images/new">Add your STOCK</a>
+    <% end %>
+</header>
+
+<div class="dropdown">
+  <button class="dropbtn">CATALOG</button>
+  <div class="dropdown-content">
+    <a href="#">ANIMALS</a>
+    <a href="#">FOOD</a>
+    <a href="#">SPORTS</a>
+  </div>
+</div>
 
 <section class="image-list">
     <% images.each do |image| %>
@@ -7,3 +21,4 @@
         <img src="<%= image['image_front']%>" alt="">
     <% end %>
 </section>
+

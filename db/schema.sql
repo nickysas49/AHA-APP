@@ -26,3 +26,10 @@ CREATE TABLE users (
 ALTER TABLE images ADD user_id INTEGER;
 INSERT INTO users (email, password_digest) values('niki@niki.com', 'pudding');
 SELECT * FROM users;
+
+ALTER TABLE images ADD image_flq TEXT;
+ALTER TABLE images ADD image_blq TEXT;
+ALTER TABLE images ADD image_frq TEXT;
+ALTER TABLE images ADD image_brq TEXT;
+
+ALTER TABLE images ADD catalog TEXT;

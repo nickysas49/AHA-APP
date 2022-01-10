@@ -1,22 +1,32 @@
 <h1>Update Item Image</h1>
 
-<form action="/dishes/<%= image['id'] %>" method="post">
+<form action="/images/<%= image['id'] %>" method="post">
   <input type="hidden" name="_method" value="put">
   <label for="">name</label>
   <input type="text" name="name" value="<%= image['name'] %>">
-
+  <br>
+  <label for="">catalog</label>
+  <input type="text" name="catalog" value="<%= image['catalog'] %>">
+  <br>
   <label for="">Front Image</label>
   <input type="url" name="image_front" placeholder="http://...." value="<%= image['image_front'] %>">
+  <br>
   <label for="">Back Image</label>
-  <input type="url" name="image_back" placeholder="http://...." value="<%= image['iimage_back'] %>">
+  <input type="url" name="image_back" placeholder="http://...." value="<%= image['image_back'] %>">
+  <br>
   <label for="">Top Image</label>
   <input type="url" name="image_top" placeholder="http://...." value="<%= image['image_top'] %>">
+  <br>
   <label for="">Bottom Image</label>
   <input type="url" name="image_bottom" placeholder="http://...." value="<%= image['image_bottom'] %>">
+  <br>
   <label for="">Left Image</label>
   <input type="url" name="image_left" placeholder="http://...." value="<%= image['image_left'] %>">
+  <br>
   <label for="">Right Image</label>
   <input type="url" name="image_right" placeholder="http://...." value="<%= image['image_right'] %>">
-  <button>update</button>
+  <br>
+  <button>Update</button>
 
 </form>
+

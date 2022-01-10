@@ -1,4 +1,61 @@
+
+
 <h1>Detial Pictures of <%= image ['name']%></h1>
+
+<h3>If you have any request, click the buttons</h3>
+
+<button type="button" id="button_fl" onclick="request_fl()">front left three-quarter</button>
+<input tpye ="text" id="button_fl_count" value = "0"/>
+<a href="/images/<%= image['id'] %>/add">Add a pic</a>
+<br>
+<button type="button" id="button_bl" onclick="request_bl()">back left three-quarter</button>
+<input tpye ="text" id="button_bl_count" value = "0"/>
+<a href="/images/<%= image['id'] %>/add">Add a pic</a>
+<br>
+<button type="button" id="button_fr" onclick="request_fr()">front right three-quarter</button>
+<input tpye ="text" id="button_fr_count" value = "0"/>
+<a href="/images/<%= image['id'] %>/add">Add a pic</a>
+<br>
+<button type="button" id="button_br" onclick="request_br()">back right three-quarter</button>
+<input tpye ="text" id="button_br_count" value = "0"/>
+<a href="/images/<%= image['id'] %>/add">Add a pic</a>
+<br>
+
+<script type="text/javascript">
+  function request_fl(){
+    var button_fl_count = document.getElementById('button_fl_count');
+    var count = button_fl_count.value;
+    count ++ ;
+    button_fl_count.value = count ;
+  }
+</script>
+
+<script type="text/javascript">
+  function request_bl(){
+    var button_bl_count = document.getElementById('button_bl_count');
+    var count = button_bl_count.value;
+    count ++ ;
+    button_bl_count.value = count ;
+  }
+</script>
+
+<script type="text/javascript">
+  function request_fr(){
+    var button_fr_count = document.getElementById('button_fr_count');
+    var count = button_fr_count.value;
+    count ++ ;
+    button_fr_count.value = count ;
+  }
+</script>
+
+<script type="text/javascript">
+  function request_br(){
+    var button_fl_count = document.getElementById('button_fbr_count');
+    var count = button_br_count.value;
+    count ++ ;
+    button_br_count.value = count ;
+  }
+</script>
 
 <h2>Item Name : <%= image ['name']%></h2>
 <h2>Front</h2>
@@ -13,3 +70,19 @@
 <img src="<%= image['image_left']%>" alt="">
 <h2>Right</h2>
 <img src="<%= image['image_right']%>" alt="">
+<h2>Front left quarter</h2>
+<img src="<%= image['image_flq']%>" alt="">
+<h2>Back left quarter</h2>
+<img src="<%= image['image_blq']%>" alt="">
+<h2>Front right quarter</h2>
+<img src="<%= image['image_frq']%>" alt="">
+<h2>Back right quarter</h2>
+<img src="<%= image['image_brq']%>" alt="">
+
+<form action="/images/<%= image['id'] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
+
+<a href="/images/<%= image['id'] %>/edit">edit</a>
+

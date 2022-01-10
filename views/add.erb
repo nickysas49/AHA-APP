@@ -1,0 +1,22 @@
+<h1>Add image for further request</h1>
+
+<form action="/images/<%= image['id'] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="">name</label>
+  <input type="text" name="name" value="<%= image['name'] %>">
+  <br>
+  <label for="">Front left three-quarter Image</label>
+  <input type="url" name="image_flq" placeholder="http://...." value="<%= image['image_flq'] %>">
+  <br>
+  <label for="">Back left three-quarter Image</label>
+  <input type="url" name="image_blq" placeholder="http://...." value="<%= image['image_blq'] %>">
+  <br>
+  <label for="">Front right three-quarter Image</label>
+  <input type="url" name="image_frq" placeholder="http://...." value="<%= image['image_frq'] %>">
+  <br>
+  <label for="">Back right three-quarter Image</label>
+  <input type="url" name="image_brq" placeholder="http://...." value="<%= image['image_brq'] %>">
+  <br>
+  <button>Update</button>
+</form>
+
