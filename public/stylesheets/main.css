@@ -1,32 +1,60 @@
+.header {
+    background-color:black;
+    width: 800px;
+    height: 50px;
+    border: black;
+    padding: 10px 10px;
+    font-family: 'Exo 2', sans-serif;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    border-radius: 10px;
+}
+
 .image-list img{
     width: 200px;
     height: 200px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    border-radius: 10px;
+}
+.button{
+    background-color:tomato;
+    color: white;
+    padding: 16px;
+    font-family: 'Bungee', cursive;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 body{
-    margin:50px;
-    background-color: lightblue;   
-    text-align: left;
+  
+    background-image:url("bg.jpg");  
+    background-repeat: repeat;
+    text-align: center;
+    color: white;
 }
 
 h1{
-    color: cornflowerblue;
+    color: tomato;
     font-family: 'Bungee', cursive;
     font-size: 60px;
 }
 
 h2{
-    color: black;
+    color: whitesmoke;
     font-family: 'Exo 2', sans-serif;
 }
 
 a{
-    color: black;
+    color: whitesmoke;
     font-family: 'Exo 2', sans-serif;
 }
 
 .dropbtn {
-    background-color:royalblue;
+    background-color:tomato;
     color: white;
     padding: 16px;
     font-family: 'Bungee', cursive;
